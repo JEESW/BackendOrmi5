@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        데이터를 URL로 보내고 싶다면 GET방식을 사용
+        데이터를 숨겨서 보내고 싶다면 POST방식을 사용
+    -->
+    <h1>서비스이름</h1>
+    <section>
+        <h2>로그인</h2>
+        <form action="" method="get">
+            <label for="user_email">이메일</label>
+            <input type="email" id="user_email" name="email">
+
+            <label for="user_password">비밀번호</label>
+            <input type="password" id="user_password" name="password">
+
+            <fieldset>
+                <legend>성별</legend>
+                <label for="user_male">남</label>
+                <input type="radio" id="user_male" name="gender" value="male">
+                <label for="user_female">여</label>
+                <input type="radio" id="user_female" name="gender" value="female">
+                <label for="user_no_gender">선택 안함</label>
+                <input type="radio" id="user_no_gender" name="gender" value="nothing">
+            </fieldset>
+
+            <fieldset>
+                <legend>사용 기술</legend>
+                <label for="html">HTML</label>
+                <input type="checkbox" id="html" name="html">
+                <label for="css">CSS</label>
+                <input type="checkbox" id="css" name="css">
+                <label for="js">JavaScript</label>
+                <input type="checkbox" id="js" name=js">
+            </fieldset>
+
+            <button>회원 가입</button>
+        </form>
+    </section>
+    <!--
+        http://localhost:63342/htmlCss_240508/014.html?email=1%40gmail.com&password=1234&gender=male&html=on&css=on&js%22=on
+        이 실행됨.
+        %40은 골뱅이 -> URL인코딩
+        hello%40world -> hello@world
+        hello%20world -> hello world
+
+        (https://www.urlencoder.org/ko/)
+
+        인코딩: 우리가 원하는 방식으로 문자열을 변경
+        디코딩: 원본으로 복구
+    -->
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+</head>
+<body>
+    <!--  action: 내 요청을 처리할 주소, 비어있으면 나 자신  -->
+    <!--  method: 요청을 무엇으로 보낼지(택배, 인편, 특급배송, ... )  -->
+    <!--    get  -->
+    <!--    post  -->
+    <!--  앞과 같은 예제입니다. method만 post로 바꾸었습니다.  -->
+    <!--  로그인 같은 경우 POST로 많이 사용 합니다.  -->
+    <form action="" method="post">
+        <input type="text" name="id">
+        <input type="password" name="pw">
+        <button>로그인</button>
+    </form>
+    <!--  검색창 같은 경우 GET으로 많이 사용합니다. 그렇지만 POST로 사용하는 경우도 종종 있습니다.  -->
+    <form action="" method="post">
+        <input type="text" name="q">
+        <button>검색</button>
+    </form>
+    <!--
+                처리 절차
+        1. 로그인 버튼을 누르게 되면 브라우저에서 각각의 input의 name과 value값을 가져와서 아래 패킷 데이터를 만듦.
+
+        POST / HTTP/1.1
+        Host: 나 자신
+
+        {
+            "id": aaa,
+            "pw": "bbb"
+            ... 생략 ...
+        }
+
+        2. 이 패킷을 host로 보내서 처리함.
+
+        3. 그런데 처리해야 할 사람이 나 자신입니다. 그래서 나 자신은 POST를 처리할 코드와 SW가 없습니다.
+        그래서 아무것도 처리되지 않는 것 처럼 보입니다.
+    -->
+</body>
+</html>

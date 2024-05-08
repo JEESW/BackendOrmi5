@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+    데이터를 URL로 보내고 싶다면 GET방식을 사용
+    데이터를 숨겨서 보내고 싶다면 POST방식을 사용
+-->
+<h1>서비스이름</h1>
+<section>
+    <h2>로그인</h2>
+    <form action="" method="get">
+        <label for="user_email">이메일</label>
+        <input type="email" id="user_email" name="email">
+
+        <label for="user_password">비밀번호</label>
+        <input type="password" id="user_password" name="password">
+
+        <fieldset>
+            <legend>성별</legend>
+            <label for="user_male">남</label>
+            <input type="radio" id="user_male" name="gender" value="male">
+            <label for="user_female">여</label>
+            <input type="radio" id="user_female" name="gender" value="female">
+            <label for="user_no_gender">선택 안함</label>
+            <input type="radio" id="user_no_gender" name="gender" value="nothing">
+        </fieldset>
+
+        <fieldset>
+            <legend>사용 기술</legend>
+            <label for="html">HTML</label>
+            <input type="checkbox" id="html" name="skill" value="html">
+            <label for="css">CSS</label>
+            <input type="checkbox" id="css" name="skill" value="css">
+            <label for="js">JavaScript</label>
+            <input type="checkbox" id="js" name="skill" value=js">
+        </fieldset>
+
+        <button>회원 가입</button>
+    </form>
+</section>
+<!--
+    http://localhost:63342/htmlCss_240508/015.html?email=1%40gmail.com&password=1234&gender=male&skill=html&skill=css&skill=js%22
+-->
+</body>
+</html>
