@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*전체 선택자*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /*타입 선택자*/
+        h1 {
+            font-weight: bold;
+        }
+        p {
+            font-size: 24px;
+        }
+
+        /*아이디 선택자*/
+        #header {
+            padding: 10px;
+        }
+
+        /*클래스 선택자*/
+        .fc-red {
+            color: red;
+        }
+
+        /*특성 선택자*/
+        [type="button"] {
+            border: 0;
+            cursor: pointer;
+        }
+        [class="btn"] {
+            color: #fff;
+            background: royalblue;
+        }
+
+        /*그룹 선택자*/
+        h1, h2, h3, h4, h5, h6{ font-weight: bold;}
+
+        /*자손 선택자*/
+        section p {
+            border: 3px solid skyblue;
+        }
+
+        /*자식 선택자*/
+        section > p {
+            color: royalblue;
+        }
+
+        /*일반 형제 선택자*/
+        section ~ p {
+            text-decoration: underline;
+        }
+
+        /*인접 형제 선택자*/
+        section + p {
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1>Hello World!</h1>
+    </header>
+
+    <h2 class="fc-red">hello world!</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aut blanditiis illo mollitia placeat quo rem voluptate voluptatibus! Cupiditate deserunt dicta, earum eveniet hic itaque maxime neque qui tempora ut?</p>
+    <p class="fc-red">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aut blanditiis illo mollitia placeat quo rem voluptate voluptatibus! Cupiditate deserunt dicta, earum eveniet hic itaque maxime neque qui tempora ut?</p>
+
+    <button>버튼</button>
+    <button type="button">버튼</button>
+    <button class="btn">버튼</button>
+
+    <div>
+        <h1>Hello</h1>
+        <h2>Hello</h2>
+        <p>Hello</p>
+    </div>
+
+    <h2>h</h2>
+    <h3>e</h3>
+    <h4>l</h4>
+    <h5>l</h5>
+    <h6>o</h6>
+
+    <section>
+        <p>Hello</p>
+        <div>
+            <p>World</p>
+        </div>
+        <p>!</p>
+    </section>
+
+    <p>section 다음 p</p>
+    <p>section 다음다음</p>
+    <p>section 다음다음다음</p>
+</body>
+</html>

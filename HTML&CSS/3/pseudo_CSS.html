@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*가상 클래스 link*/
+        a:link {
+            color: green;
+        }
+
+        /*가상 클래스 hover*/
+        /*div:hover {*/
+        /*    background-color: darkblue;*/
+        /*    color: white;*/
+        /*}*/
+
+        /*.hover {*/
+        /*    background-color: darkblue;*/
+        /*    color: white;*/
+        /*}*/
+
+        /*가상 클래스 visited*/
+        a:visited {
+            color: blue;
+        }
+
+        /*가상 클래스 active*/
+        div:active {
+            background-color: darkblue;
+            color: white;
+        }
+
+        /*가상 클래스 focus*/
+        *:focus {
+            background-color: hotpink;
+        }
+
+        /*구조적 가상 선택자*/
+        ul li:first-child {
+            background-color: aliceblue;
+        }
+        ul li:last-child {
+            background-color: yellow;
+        }
+        ul li:nth-child(3) {
+            background-color: blue;
+        }
+        ul li:nth-child(2n) {
+            background-color: tan;
+        }
+        li:not(:first-child) {
+            margin-top:20px;
+        }
+        /*section안에서 div 형제요소 중에 2번째 요소. 따라서, 2가아닌 1이 나옴.*/
+        section div:nth-child(2) {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>0</h1>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </section>
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+
+    <a href="https://www.nexon.com">넥슨으로가기</a>
+    <button>버튼</button>
+    <input type="text">
+    <div>hello</div>
+    <!--  <div class="hover">hello</div>  -->
+</body>
+</html>

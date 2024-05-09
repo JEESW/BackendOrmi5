@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*1. 후자 우선의 원칙: 뒤에 적용 된 스타일이 우선 적용됨.*/
+        /*div {*/
+        /*    color: blue*/
+        /*}*/
+
+        /*div {*/
+        /*    color: green;*/
+        /*}*/
+
+        /*2. 구체성의 원칙: 명시도가 높은 스타일이 우선 적용됨.*/
+        body div#Hello_Div {
+            color: yellow;
+        }
+
+        body div.hello_div {
+            color: red;
+        }
+
+        div.hello_div {
+            color: blue;
+        }
+
+        .hello_div {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+<!--
+    <div>
+        hello
+    </div>
+-->
+    <div class="hello_div" id="Hello_Div" style="color: black">
+        hello
+    </div>
+</body>
+</html>
