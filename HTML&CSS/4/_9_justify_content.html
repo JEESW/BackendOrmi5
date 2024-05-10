@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            width: 400px;
+            height: 400px;
+            display: flex;
+            justify-content: space-between;
+            background-color: #767676;
+        }
+
+        .col {
+            width: 50px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .rcol {
+            width: 50px;
+            height: 400px;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+        }
+
+        .rectangle {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="col">
+            <div class="blue rectangle">A</div>
+            <div class="red rectangle">B</div>
+            <div class="yellow rectangle">C</div>
+        </div>
+        <div class="col">
+            <div class="blue rectangle">D</div>
+            <div class="yellow rectangle">E</div>
+        </div>
+        <div class="rcol">
+            <div class="blue rectangle">F</div>
+            <div class="red rectangle">G</div>
+            <div class="yellow rectangle">H</div>
+        </div>
+    </section>
+</body>
+</html>

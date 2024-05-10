@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*case 1*/
+        /*div {
+            width: 100px;
+            height: 100px;
+            margin: 50px;
+            background-color: teal;
+        }
+
+        div+div {
+            background-color: deeppink;
+        }*/
+
+        /*case 2*/
+
+        div {
+            display: flow-root;
+            width: 100px;
+            height: 100px;
+            margin: 50px;
+            background-color: teal;
+        }
+
+        .child {
+            height: 100px;
+            margin-bottom: 30px;
+            background-color: deeppink;
+        }
+
+        p {
+            margin: 10px 0 10px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!--  case1  -->
+    <!--  <div>a</div>  -->
+    <!--  <div>b</div>  -->
+    <!--  <div>  -->
+        <!--   a  -->
+        <!-- <div class="child">b</div>  -->
+    <!--  </div>  -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam culpa dolore dolorum eius facere labore nihil odit saepe similique tempora vel, veritatis. Consequuntur eveniet incidunt laborum provident. Ab, at eligendi!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab adipisci aut culpa cum cumque eos error excepturi impedit ipsa labore neque non numquam quas quo quod rerum, similique voluptatibus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda autem commodi corporis cum doloremque, ea explicabo iusto libero minima molestias obcaecati placeat praesentium quasi quidem sequi similique soluta tempore vel?</p>
+    <h1>hello</h1>
+</body>
+</html>
