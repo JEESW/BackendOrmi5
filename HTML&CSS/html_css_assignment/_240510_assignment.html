@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Law_of_10000_hours</title>
+    link
+    <style>
+        @font-face {
+            font-family: "tvN Enjoystories";
+            src: url('./font/tvNenjoystoriesMedium.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: "Gmarket Sans";
+            src: url('./font/GmarketSansTTFMedium.ttf') format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: "Gmarket Sans";
+            src: url('./font/GmarketSansTTFBold.ttf') format("truetype");
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: "Noto Sans";
+            src: url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #5B2386;
+        }
+
+        main {
+            height: 1884px;
+            padding: 50px 100px 50px 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        img {
+            position: absolute;
+        }
+
+        .logo {
+            top: 194px;
+            z-index: 1;
+        }
+
+        .clock {
+            top: 120px;
+            z-index: 0;
+        }
+
+        .click {
+            top: 1006px;
+            margin-left: 650px;
+        }
+
+        .weniv {
+            top: 1689px;
+        }
+
+        .font_tvn {
+            font-family: "tvN Enjoystories", sans-serif;
+            align-items: center;
+        }
+
+        .font_gmk {
+            font-family: "Gmarket Sans", sans-serif;
+            align-items: center;
+        }
+
+        .font_not {
+            font-family: "Noto Sans", sans-serif;
+            align-items: center;
+        }
+
+        .first_text {
+            position: absolute;
+            top: 431px;
+            font-size: 36px;
+            font-weight: 700;
+            color: #F5DF4D;
+        }
+
+        .second_text {
+            position: relative;
+            top: 489px;
+            color: #FFFFFF;
+            text-align: center;
+            white-space: pre;
+            z-index: 1;
+        }
+
+        .second_text_bold {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .second_text_norm {
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        .quote_box {
+            width: 500px;
+            position: absolute;
+            display: flex;
+            top: 562px;
+            justify-content: space-between;
+            z-index: 0;
+        }
+
+        .quote {
+            font-size: 96px;
+            font-weight: 700;
+            color: #FCEE214D
+        }
+
+        .third_text {
+            position: absolute;
+            display: flex;
+            top: 736px;
+            font-size: 24px;
+            font-weight: 400;
+            color: #FFFFFF;
+            gap: 7px;
+        }
+
+        .forth_text {
+            position: absolute;
+            display: flex;
+            top: 820px;
+            font-size: 24px;
+            font-weight: 400;
+            color: #FFFFFF;
+            gap: 7px;
+        }
+
+        .input_box {
+            width: 228px;
+            height: 57px;
+            background-color: #FFFFFF;
+            border-radius: 7px;
+            font-size: 24px;
+            font-weight: 400;
+            text-align: center;
+            color: #000000;
+        }
+
+        .input_box::placeholder {
+            color: #BABCBE;
+        }
+
+        .link_box {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            border-radius: 56px;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: 700;
+            color: #5B2386;
+            text-decoration: none;
+        }
+
+        .fifth_text {
+            position: relative;
+            top: 1050px;
+            color: #FFFFFF;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            white-space: pre;
+        }
+
+        .fifth_text_bold {
+            font-size: 72px;
+            font-weight: 700;
+        }
+
+        .fifth_text_norm {
+            font-size: 24px;
+            font-weight: 400;
+        }
+
+        .link_chain {
+            width: 565px;
+            position: absolute;
+            top: 1493px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .first_link {
+            width: 565px;
+            height: 66px;
+            top: 992px;
+            background-color: #FCEE21;
+        }
+
+        .second_link {
+            position: relative;
+            width: 356px;
+            height: 66px;
+            background-color: #FCEE21;
+        }
+
+        .third_link {
+            position: relative;
+            width: 191px;
+            height: 66px;
+            background-color: #FFFFFF;
+        }
+
+        .footer_text {
+            position: relative;
+            top: 1434px;
+            font-size: 12px;
+            font-weight: 400;
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <img src="./img/logo.png" alt="1만 시간의 법칙" class="logo">
+        <img src="./img/clock.png" alt="" class="clock">
+
+        <span class="font_tvn first_text">"연습은 어제의 당신보다 당신을 더 낫게 만든다."</span>
+
+        <div class="second_text"><span class="second_text_bold font_gmk">1만 시간의 법칙</span><span class="second_text_norm font_gmk">은</span></div>
+        <span class="second_text second_text_norm font_gmk">어떤 분야의 전문가가 되기 위해서는</span>
+        <span class="second_text second_text_norm font_gmk">최소한 1만 시간의 훈련이 필요하다는 법칙이다.</span>
+
+        <div class="quote_box">
+            <span class="quote font_gmk">“</span>
+            <span class="quote font_gmk">”</span>
+        </div>
+
+        <div class="third_text font_gmk">
+            <span>나는 </span>
+            <label for="expert"></label>
+            <input type="text" id="expert" class="input_box font_gmk" placeholder="예)프로그래밍">
+            <span>전문가가 될 것이다.</span>
+        </div>
+
+        <div class="forth_text font_gmk">
+            <span>그래서 앞으로 매일 하루에 </span>
+            <label for="hour"></label>
+            <input type="text" id="hour" class="input_box font_gmk" placeholder="예)5시간">
+            <span>시간씩 훈련할 것이다.</span>
+        </div>
+
+        <a href="" class="link_box first_link font_gmk">나는 며칠 동안 훈련을 해야 1만 시간이 될까?</a>
+        <img src="./img/click.png" alt="" class="click">
+
+        <div class="fifth_text"><span class="fifth_text_norm font_gmk">당신은 </span><span class="fifth_text_bold font_gmk">프로그래밍</span><span class="fifth_text_norm font_gmk">전문가가 되기 위해서</span></div>
+        <div class="fifth_text"><span class="fifth_text_norm font_gmk">대략 </span><span class="fifth_text_bold font_gmk">5110</span><span class="fifth_text_norm font_gmk">일 이상 훈련하셔야 합니다! :)</span></div>
+
+        <div class="link_chain">
+            <a href="" class="link_box second_link font_gmk">훈련하러 가기 GO!GO!</a>
+            <a href="" class="link_box third_link font_gmk">공유하기</a>
+        </div>
+
+        <img src="./img/weniv.png" alt="weniv" class="weniv">
+
+        <p class="footer_text font_not">※ 본 서비스 내 이미지 및 콘텐츠의 저작권은 주식회사 WeNiv에 있습니다.</p>
+        <p class="footer_text font_not">수정 및 재배포, 무단 도용 시 법적인 문제가 발생할 수 있습니다.</p>
+    </main>
+</body>
+</html>
