@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HODU</title>
+    <style>
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('./font/Pretendard-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+
+        }
+
+        header, main, article, footer {
+            padding: 0 15vw;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        header {
+            height: 102px;
+            align-items: center;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        p {
+            white-space: pre-line;
+        }
+
+        .top_background {
+            background-color: #F2E9D8;
+        }
+
+        .logo {
+            margin-right: 100px;
+        }
+
+        .first_article_img {
+            margin-top: 80px;
+            border-radius: 30px;
+            margin-right: 110px;
+            box-shadow: 10px 10px 30px 0 #00000040;
+        }
+
+        .pretendard_font {
+            font-family: Pretendard, serif;
+        }
+
+        .header_rside {
+            display: flex;
+            gap: 49px;
+            align-items: center;
+        }
+
+        .header_menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .header_menu_link {
+            color: #000000;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .download_link {
+            display: flex;
+            width: 140px;
+            height: 50px;
+            border: 0;
+            background-color: #D97652;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 40px;
+            justify-content: center;
+            align-items: center;
+            color: #FFFFFF;
+        }
+
+        .main_title {
+            margin-top: 200px;
+            font-size: 48px;
+            font-weight: 700;
+        }
+
+        .main_content {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            font-weight: 400;
+            font-size: 16px;
+        }
+
+        .first_article_title {
+            margin-top: 172px;
+            font-weight: 700;
+            font-size: 36px;
+        }
+
+        .first_article_content {
+            margin-top: 30px;
+            font-weight: 400;
+            font-size: 16px;
+        }
+
+        .second_article {
+            margin-top: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .second_article_title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 700;
+            font-size: 48px;
+            color: #D97652;
+        }
+
+        .second_article_content {
+            margin-bottom: 88px;
+            font-weight: 400;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .orange_stroke {
+            font-weight: 700;
+            color: #D97652;
+        }
+
+        .second_article_button_space {
+            height: 108px;
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .second_article_button_description {
+            font-weight: 700;
+            font-size: 24px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="top_background pretendard_font">
+        <header>
+            <a href="">
+                <img src="./img/logo.png" alt="HODU Home" class="logo">
+            </a>
+            <div class="header_rside">
+                <nav>
+                    <ul class="header_menu">
+                        <li><a href="" class="header_menu_link">Home</a></li>
+                        <li><a href="" class="header_menu_link">About</a></li>
+                        <li><a href="" class="header_menu_link">Support</a></li>
+                    </ul>
+                </nav>
+                <a href="" class="download_link">Download</a>
+            </div>
+        </header>
+        <main>
+            <div>
+                <p class="main_title">Lorem Ipsum is simply
+                    dummy text of the printing and</p>
+                <p class="main_content">Lorem Ipsum is simply dummy text of the printing and                    typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text
+                    ever since the 1500s, when an unknown</p>
+                <a href="" class="download_link">Download</a>
+            </div>
+            <img src="./img/top_background_cat.png" alt="">
+        </main>
+    </div>
+    <article class="first_article pretendard_font">
+        <img src="./img/first_article_thumbnail.png" alt="" class="first_article_img">
+        <div>
+            <p class="first_article_title">Lorem Ipsum is simply dummy text of the printing and dummy text</p>
+            <p class="first_article_content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+        </div>
+    </article>
+    <article class="second_article pretendard_font">
+        <p class="second_article_title">dummy text of the printing and dummy</p>
+        <p class="second_article_content">Lorem Ipsum is simply <span class="orange_stroke">dummy text</span> of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</p>
+        <div class="second_article_img_space">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+        </div>
+        <div class="second_article_button_space">
+            <p class="second_article_button_description">Continue exploring HODU</p>
+            <a href="" class="download_link">Show more</a>
+        </div>
+        <br>
+    </article>
+</body>
+</html>
