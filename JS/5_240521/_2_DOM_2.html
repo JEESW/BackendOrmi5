@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul></ul>
+    <button>Make me More!</button>
+    <div id="parentElement">
+        <span id="childElement">hello guys~</span>
+    </div>
+    <script>
+        // 요소 제어 예제 1
+
+        // const myBtn = document.querySelector("button");
+        // const myUl = document.querySelector("ul");
+        //
+        // myBtn.addEventListener('click', function () {
+        //     for (let i = 0; i < 5; i++) {
+        //         const myLi = document.createElement('li');
+        //         myUl.appendChild(myLi);
+        //     }
+        // });
+
+        // 요소 제어 예제 2
+
+        // const myBtn = document.querySelector("button");
+        // const myUl = document.querySelector("ul");
+        //
+        // myBtn.addEventListener('click', function(){
+        //     for(let i=0; i < 5; i++){
+        //         const myLi = document.createElement('li');
+        //         const btnDel = document.createElement('button');
+        //         const btnTxt = document.createTextNode('버튼');
+        //
+        //         btnDel.append(btnTxt);
+        //         btnDel.addEventListener('click', ()=>{
+        //             myLi.remove();
+        //         });
+        //         myLi.append('삭제하기: ', btnDel);
+        //         myUl.appendChild(myLi);
+        //     }
+        // });
+        //
+        // const span = document.createElement("span");
+        // const sibling = document.getElementById("childElement");
+        // const parentDiv = document.getElementById("parentElement");
+        // parentDiv.insertBefore(span, sibling);
+    </script>
+</body>
+</html>
