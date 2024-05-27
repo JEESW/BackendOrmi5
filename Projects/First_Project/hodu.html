@@ -289,9 +289,20 @@
             color: #FFFFFF;
         }
 
+        .no_show_modal{
+            display: none;
+            z-index: 0;
+        }
+
+        .show_modal{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 99;
+        }
+
         .modal {
             position: fixed;
-            display: none;
             top: 0;
             left: 0;
             width: 100%;
@@ -478,7 +489,7 @@
                         <p>Lorem Ipsum has been the industry's standard dummy text </p>
                     </div>
                 </div>
-                <form action="" class="subscribe_email_input_and_button_space">
+                <form action="" method ="post" class="subscribe_email_input_and_button_space">
                     <div>
                         <img src="./img/icon-mail.png" alt="" class="icon-mail_img">
                         <label for="e-mail" style="display: none">e-mail</label>
@@ -508,7 +519,7 @@
         <img src="./img/icon-arrow_up_able.png" alt="scroll up button">
     </button>
     <!-- Subscribe를 누르면 나오는 모달창 -->
-    <section class="modal">
+    <section class="modal no_show_modal">
         <div class="modal_body pretendard_font">
             <img src="./img/thanks_page_cat_img.png" alt="cat image" class="modal_img">
             <h2 class="modal_title">Thank you!</h2>
@@ -516,6 +527,7 @@
             <button class="modal_close_btn" id="thanksCloseBtn" type="button">OK! I Love HODU</button>
         </div>
     </section>
+    <!-- Script -->
     <!-- Show more를 누르면 이미지 증식 -->
     <script>
         const photo = document.querySelector('.second_article_img_space');
@@ -553,7 +565,6 @@
             photo.appendChild(div);
         }
     </script>
-
     <!-- 맨 위로 스크롤 하는 버튼 -->
     <script>
         window.onscroll = function() {
@@ -576,47 +587,38 @@
         document.getElementById("scroll_up_btn").addEventListener("click", topFunction);
     </script>
 
-    <!-- Thank you 모달창 불러오기 -->
+    <!-- Thank you 모달창 여닫기 -->
     <script>
         const modal = document.querySelector('.modal');
         const thanksPageBtn = document.getElementById('thanksPageBtn');
-
-        thanksPageBtn.addEventListener('click', function () {
-            modal.style.display="flex";
-            modal.style.justifyContent="center";
-            modal.style.alignItems="center";
-            modal.style.zIndex="99";
-        });
-    </script>
-
-    <!-- Thank you 모달창 닫기 -->
-    <script>
-        const modal = document.querySelector('.modal');
         const thanksCloseBtn = document.getElementById('thanksCloseBtn');
 
+        thanksPageBtn.addEventListener('click', function () {
+            modal.classList.remove('no_show_modal');
+            modal.classList.add('show_modal');
+        });
+
         thanksCloseBtn.addEventListener('click', function () {
-            modal.style.display="none";
-            modal.style.justifyContent="normal";
-            modal.style.alignItems="normal";
-            modal.style.zIndex="0";
+            modal.classList.remove('show_modal');
+            modal.classList.add('no_show_modal');
         });
     </script>
 
     <!-- 카카오 맵 -->
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=77caeb6f142946daa35c692edb787bfe"></script>
     <script>
-        var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+        const mapContainer = document.getElementById('map'), // 지도를 표시할 div
             mapOption = {
                 center: new kakao.maps.LatLng(33.442561, 126.571433), // 지도의 중심좌표
                 level: 3 // 지도의 확대 레벨
             };
 
-        var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+        const map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
         // 지도타입 컨트롤의 지도 또는 스카이뷰 버튼을 클릭하면 호출되어 지도타입을 바꾸는 함수입니다
         function setMapType(maptype) {
-            var roadmapControl = document.getElementById('btnRoadmap');
-            var skyviewControl = document.getElementById('btnSkyview');
+            const roadmapControl = document.getElementById('btnRoadmap');
+            const skyviewControl = document.getElementById('btnSkyview');
             if (maptype === 'roadmap') {
                 map.setMapTypeId(kakao.maps.MapTypeId.ROADMAP);
                 roadmapControl.className = 'selected_btn';
