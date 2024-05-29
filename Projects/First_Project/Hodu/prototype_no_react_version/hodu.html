@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HODU</title>
+    <link rel="stylesheet" type="text/css" href="styling_hodu.css">
+</head>
+<body>
+    <!-- 헤더와 메인을 같은 백그라운드로 묶음 -->
+    <div class="top_background pretendard_font">
+        <!-- 헤더부 -->
+        <header>
+            <a href="">
+                <img src="./img/logo.png" alt="HODU Home" class="logo">
+            </a>
+            <div class="header_rside">
+                <nav>
+                    <ul class="header_menu">
+                        <li><a href="" class="header_menu_link">Home</a></li>
+                        <li><a href="" class="header_menu_link">About</a></li>
+                        <li><a href="" class="header_menu_link">Support</a></li>
+                    </ul>
+                </nav>
+                <a href="" class="orange_btn">Download</a>
+            </div>
+        </header>
+        <!-- 메인부 -->
+        <main>
+            <div>
+                <h1 class="main_title">Lorem Ipsum is simply
+                    dummy text of the printing and</h1>
+                <p class="main_content">Lorem Ipsum is simply dummy text of the printing and                    typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text
+                    ever since the 1500s, when an unknown</p>
+                <a href="" class="orange_btn">Download</a>
+            </div>
+            <img src="./img/top_background_cat.png" alt="">
+        </main>
+    </div>
+    <!-- 첫 번째 아티클 -->
+    <article class="first_article pretendard_font">
+        <img src="./img/first_article_thumbnail.png" alt="" class="first_article_img">
+        <div>
+            <h2 class="first_article_title">Lorem Ipsum is simply dummy text of the printing and dummy text</h2>
+            <p class="first_article_content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+        </div>
+    </article>
+    <!-- 두 번째 아티클 -->
+    <article class="second_article pretendard_font">
+        <h2 class="second_article_title">dummy text of the printing and dummy</h2>
+        <p class="second_article_content">Lorem Ipsum is simply <a href="" class="orange_stroke">dummy text</a> of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</p>
+        <!-- 세 이미지를 한 div에 묶고, 그 묶음들을 img_space에서 관리 -->
+        <section class="second_article_img_space">
+            <div>
+                <img src="./img/cat_img_1.png" alt="cat image 1" class="img_resize">
+                <img src="./img/cat_img_2.png" alt="cat image 2" class="img_resize">
+                <img src="./img/cat_img_3.png" alt="cat image 3" class="img_resize">
+            </div>
+            <div>
+                <img src="./img/cat_img_4.png" alt="cat image 4" class="img_resize">
+                <img src="./img/cat_img_5.png" alt="cat image 5" class="img_resize">
+                <img src="./img/cat_img_6.png" alt="cat image 6" class="img_resize">
+            </div>
+        </section>
+        <div class="second_article_button_space">
+            <span class="second_article_button_description">Continue exploring HODU</span>
+            <button class="orange_btn show_more_btn">Show more</button>
+        </div>
+    </article>
+    <!-- 구분선 -->
+    <hr>
+    <!-- 세 번째 아티클 -->
+    <article class="third_article pretendard_font">
+        <h2 class="third_article_title">Where you'll be</h2>
+        <span class="third_article_content">330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea</span>
+        <!-- 카카오 맵 -->
+        <div class="map_wrap">
+            <div id="map" style="width:100%;height:520px;position:relative;overflow:hidden;"></div>
+            <!-- 지도타입 컨트롤 div 입니다 -->
+            <div class="custom_typecontrol radius_border">
+                <span id="btnRoadmap" class="selected_btn" onclick="setMapType('roadmap')">지도</span>
+                <span id="btnSkyview" class="btn" onclick="setMapType('skyview')">스카이뷰</span>
+            </div>
+            <!-- 지도 확대, 축소 컨트롤 div 입니다 -->
+            <div class="custom_zoomcontrol radius_border">
+                <span onclick="zoomIn()"><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_plus.png" alt="확대"></span>
+                <span onclick="zoomOut()"><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_minus.png" alt="축소"></span>
+            </div>
+        </div>
+    </article>
+    <!-- 구독창과 배너창을 묶음 -->
+    <div class="banner_and_subscribe">
+        <!-- 구독창 -->
+        <aside class="subscribe_aside">
+            <div class="subscribe_aside_space pretendard_font">
+                <!-- 구독창 왼쪽 부분 -->
+                <div>
+                    <h2 class="subscribe_title">Subscribe to our Blog post</h2>
+                    <div class="subscribe_content">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <p>Lorem Ipsum has been the industry's standard dummy text </p>
+                    </div>
+                </div>
+                <!-- 구독창 오른쪽 form, post방식으로 입력 받음 -->
+                <form action="" method ="post" class="subscribe_email_input_and_button_space">
+                    <div>
+                        <img src="./img/icon-mail.png" alt="" class="icon-mail_img">
+                        <label for="e-mail" style="display: none">e-mail</label>
+                        <input type="text" name="e-mail" id="e-mail" class="subscribe_input_box" placeholder="Enter your e-mail address">
+                    </div>
+                    <button class="subscribe_btn" id="thanksPageBtn" type="button">Subscribe</button>
+                </form>
+            </div>
+        </aside>
+        <!-- 배너창 -->
+        <section class="banner">
+            <img src="./img/footer_banner.png" alt="banner">
+        </section>
+    </div>
+    <!-- 푸터부 -->
+    <footer>
+        <a href="">
+            <img src="./img/logo-fin.png" alt="HODU">
+        </a>
+        <nav class="footer_share_icon_space">
+            <a href=""><img src="./img/icon-blog.png" alt=""></a>
+            <a href=""><img src="./img/icon-insta.png" alt=""></a>
+            <a href=""><img src="./img/icon-facebook.png" alt=""></a>
+            <a href=""><img src="./img/icon-youtube.png" alt=""></a>
+        </nav>
+    </footer>
+    <!-- 맨 위로 스크롤을 올려주는 버튼 -->
+    <button id="scroll_up_btn">
+        <img src="./img/icon-arrow_up_able.png" alt="scroll up button">
+    </button>
+    <!-- Subscribe를 누르면 나오는 모달창 -->
+    <section class="modal no_show_modal">
+        <div class="modal_body pretendard_font">
+            <img src="./img/thanks_page_cat_img.png" alt="cat image" class="modal_img">
+            <h2 class="modal_title">Thank you!</h2>
+            <p class="modal_content">Lorem Ipsum is simply dummy text of the printing industry.</p>
+            <button class="modal_close_btn" id="thanksCloseBtn" type="button">OK! I Love HODU</button>
+        </div>
+    </section>
+    <!-- Scripts -->
+    <!-- Show more를 누르면 이미지 증식 -->
+    <script src="show_more_img_load.js"></script>
+    <!-- 맨 위로 스크롤 하는 버튼 -->
+    <script src="scroll_up.js"></script>
+    <!-- Thank you 모달창 여닫기 -->
+    <script src="modal_open_and_close.js"></script>
+    <!-- 카카오 맵 -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=77caeb6f142946daa35c692edb787bfe"></script>
+    <script src="map_functions.js"></script>
+</body>
+</html>
