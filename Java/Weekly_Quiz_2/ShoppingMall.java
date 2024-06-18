@@ -9,7 +9,7 @@ public abstract class ShoppingMall {
     this.len = len;
   }
 
-  public void addProduct(Clothing c) {
+  public void addProduct(Product p) {
     this.last++;
 
     if (this.last >= len) {
@@ -21,40 +21,10 @@ public abstract class ShoppingMall {
       this.p = tmp;
     }
 
-    this.p[last] = c;
+    this.p[last] = p;
   }
 
-  public void addProduct(Electronics e) {
-    this.last++;
-
-    if (this.last >= len) {
-      this.len *= 2;
-      Product[] tmp = new Product[len];
-      for (int i = 0; i < last; i++) {
-        tmp[i] = this.p[i];
-      }
-      this.p = tmp;
-    }
-
-    this.p[last] = e;
-  }
-
-  public void addProduct(Food f) {
-    this.last++;
-
-    if (this.last >= len) {
-      this.len *= 2;
-      Product[] tmp = new Product[len];
-      for (int i = 0; i < last; i++) {
-        tmp[i] = this.p[i];
-      }
-      this.p = tmp;
-    }
-
-    this.p[last] = f;
-  }
-
-  public void removeProduct(Clothing c) {
+  public void removeProduct(Product p) {
     if (this.p.length == 0) {
       return;
     }
@@ -62,7 +32,7 @@ public abstract class ShoppingMall {
     boolean isDeleted = false;
 
     for (int i = 0; i <= this.last; i++) {
-      if (this.p[i] == c) {
+      if (this.p[i] == p) {
         this.p[i] = null;
         isDeleted = true;
         continue;
@@ -80,51 +50,26 @@ public abstract class ShoppingMall {
     }
   }
 
-  public void removeProduct(Electronics e) {
+  public void removeProduct(String name) {
     if (this.p.length == 0) {
       return;
     }
 
+    int idx = 0;
     boolean isDeleted = false;
 
     for (int i = 0; i <= this.last; i++) {
-      if (this.p[i] == e) {
+      if (this.p[i].getName().equals(name)) {
         this.p[i] = null;
+        idx = i + 1;
         isDeleted = true;
-        continue;
-      }
-
-      if (isDeleted) {
-        this.p[i - 1] = this.p[i];
+        break;
       }
     }
     if (isDeleted) {
-      this.p[this.last] = null;
-      this.last--;
-    } else {
-      System.out.println("해당하는 물품이 없습니다.");
-    }
-  }
-
-  public void removeProduct(Food f) {
-    if (this.p.length == 0) {
-      return;
-    }
-
-    boolean isDeleted = false;
-
-    for (int i = 0; i <= this.last; i++) {
-      if (this.p[i] == f) {
-        this.p[i] = null;
-        isDeleted = true;
-        continue;
-      }
-
-      if (isDeleted) {
+      for (int i = idx; i <= this.last; i++) {
         this.p[i - 1] = this.p[i];
       }
-    }
-    if (isDeleted) {
       this.p[this.last] = null;
       this.last--;
     } else {
@@ -134,8 +79,13 @@ public abstract class ShoppingMall {
 
   public void displayProducts() {
     System.out.println();
+    System.out.println("------------------------------------------------");
     for (int i = 0; i <= this.last; i++) {
-      System.out.println(this.p[i].getName() + " (판매 가격: " + this.p[i].calculatePrice() + "원)");
+      System.out.println("제품 이름: " + this.p[i].getName());
+      System.out.println("제품 가격: " + this.p[i].getPrice());
+      System.out.println("재고량: " + this.p[i].getStock() + "개");
+      System.out.println("행사 판매 가격: " + this.p[i].calculatePrice() + "원");
+      System.out.println("------------------------------------------------");
     }
     System.out.println();
   }
@@ -148,9 +98,13 @@ public abstract class ShoppingMall {
       System.out.println();
       return;
     }
-
+    System.out.println("------------------------------------------------");
     for (int i = start; i <= this.last; i++) {
-      System.out.println(this.p[i].getName() + " (판매 가격: " + this.p[i].calculatePrice() + "원)");
+      System.out.println("제품 이름: " + this.p[i].getName());
+      System.out.println("제품 가격: " + this.p[i].getPrice());
+      System.out.println("재고량: " + this.p[i].getStock() + "개");
+      System.out.println("행사 판매 가격: " + this.p[i].calculatePrice() + "원");
+      System.out.println("------------------------------------------------");
     }
 
     System.out.println();
@@ -165,8 +119,13 @@ public abstract class ShoppingMall {
       return;
     }
 
+    System.out.println("------------------------------------------------");
     for (int i = start; i < end; i++) {
-      System.out.println(this.p[i].getName() + " (판매 가격: " + this.p[i].calculatePrice() + "원)");
+      System.out.println("제품 이름: " + this.p[i].getName());
+      System.out.println("제품 가격: " + this.p[i].getPrice());
+      System.out.println("재고량: " + this.p[i].getStock() + "개");
+      System.out.println("행사 판매 가격: " + this.p[i].calculatePrice() + "원");
+      System.out.println("------------------------------------------------");
     }
 
     System.out.println();
