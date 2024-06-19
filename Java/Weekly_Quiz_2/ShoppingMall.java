@@ -29,20 +29,21 @@ public abstract class ShoppingMall {
       return;
     }
 
+    int idx = 0;
     boolean isDeleted = false;
 
     for (int i = 0; i <= this.last; i++) {
       if (this.p[i] == p) {
         this.p[i] = null;
+        idx = i + 1;
         isDeleted = true;
-        continue;
-      }
-
-      if (isDeleted) {
-        this.p[i - 1] = this.p[i];
+        break;
       }
     }
     if (isDeleted) {
+      for (int i = idx; i <= this.last; i++) {
+          this.p[i - 1] = this.p[i];
+      }
       this.p[this.last] = null;
       this.last--;
     } else {
