@@ -1,0 +1,6 @@
+-- SELECT
+-- 	name,
+-- 	age,
+-- 	(SELECT AVG(age) FROM students) AS avg_age
+-- FROM students
+-- WHERE age < 30;
