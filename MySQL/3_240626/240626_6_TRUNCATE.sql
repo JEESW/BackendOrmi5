@@ -1,0 +1,5 @@
+-- SELECT * FROM tmp1;
+
+-- TRUNCATE TABLE tmp1;
+
+-- SELECT * FROM tmp1;

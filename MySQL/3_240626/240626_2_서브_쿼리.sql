@@ -1,0 +1,22 @@
+-- SELECT
+-- 	name,
+--     age,
+--     (SELECT AVG(age) FROM students) AS avg_age
+-- FROM students
+-- WHERE age < 30;
+
+-- SELECT a.*
+-- FROM (
+-- 	SELECT *
+--     FROM classes
+--     WHERE class_name IN ("데이터베이스", "알고리즘")
+-- ) AS a INNER JOIN students AS b
+-- 	ON a.name = b.name;
+
+-- SELECT name, age, address
+-- FROM students
+-- WHERE name IN (
+-- 	SELECT name
+-- 	FROM classes
+--     WHERE class_name IN ("데이터베이스", "알고리즘")
+-- );
