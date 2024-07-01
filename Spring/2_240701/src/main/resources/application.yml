@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: spring-boot
+
+kakao:
+  api:
+    key: 1234567890
