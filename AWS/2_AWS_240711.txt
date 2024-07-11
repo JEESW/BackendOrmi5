@@ -1,0 +1,151 @@
+하드 링크: 원본 파일이 가르키는 대상을 가르킴.
+소프트 링크: 바로가기와 같은 역할, 원본 파일을 가르킴. -> 심볼릭 링크라고도 함.
+
+권한에 대하여
+맨앞은 타입으로 d면 디렉토리, -면 파일을 뜻하고, l이면 심볼릭 링크
+앞에서 2번째 부터 세 글자씩 자르면, 첫 번째는 소유자 두 번째는 그룹, 마지막은 기타 사용자를 가르킴.
+r -> CRUD 중에 R
+w -> CRUD 중에 CUD
+x -> 실행
+
+내 서버에서 8081 포트로 연결하려면 lightsail의 IPv4 방화벽에서 8081을 허용해줘야 함.
+내가 사용하는 포트만 열어야 보안 문제가 없음!
+lightsail의 지표 그래프에서 요청한 트래픽 확인가능!
+
+
+
+	- key 다루기 연습, sort -
+
+vim newfile.txt
+rm *.txt
+vim number.txt
+	Kim 25
+	Park 27
+	Choi 29
+	Lee 30
+sort -k 2 -n -r number.txt
+sort -k 1 number.txt
+rm number.txt
+vim test.txt
+	Hello, this is a test file. It contains several words, including the word test.
+grep "test" test.txt
+grep -v "word" test.txt
+find . -name example.txt
+find . -name test.txt
+cp test.txt Test.txt 혹은 touch test.txt Test.txt
+find . -iname test.txt
+sudo find /var/log -type f -mtime -7
+which java
+which python3
+which vim
+
+
+	- 찾기 연습 -
+
+touch a.good asdasd.good b.good b.c
+rm Test.txt test.txt
+ls *.good
+ls ?.good
+ls [abc].good
+find . -name "*.good"
+find . -name "*a*.good"
+
+
+	- 파이프 연습 -
+
+ls > file.txt
+cat file.txt
+ls *.good > file.txt
+cat file.txt
+ls >> file.txt
+cat file.txt
+sort < file.txt
+이건 실행은 안했음 ->	ls /nonexistent_directory 2> error.txt
+tail -f file.txt
+tail -20f file.txt
+cat > newfile.txt		Ctrl+D로 나감.
+cat >> newfile.txt
+cat newfile.txt
+ls | cat file.txt
+ps aux
+ps aux | grep python
+ls | grep python
+ls | grep file
+
+
+	- 링크 연습 -
+
+ln file.txt hardlink.txt
+rm file.txt
+cat hardlink.txt
+ln -s hardlink.txt symboliclink.txt
+cat symboliclink.txt
+rm hardlink.txt
+cat symboliclink.txt
+rm symboliclink.txt
+
+
+	- 시간 호출 -
+
+timedatectl
+sudo timedatectl set-timezone Asia/Seoul
+
+
+	- 권한 변경 -
+
+ls -l
+chmod 755 newfile.txt
+ls -l
+
+
+	- 쉘 실행하기 -
+
+vim hello_world.sh
+	#!/bin/bash
+	echo "hello world"
+chmod 755 hello_world.sh
+./hello_world.sh
+vim hello_world.sh
+	#!/bin/bash
+	echo "현재 날짜와 시간은:"
+	date
+./hello_world.sh
+
+
+	- 깃과 연결 후 자바 다운 -
+
+git --version
+git config --global user.name "깃 닉네임"
+git config --global user.email "깃 이메일"
+git clone https://github.com/weniv/est-backend-5.git
+cd ./est-backend-5
+sudo apt install gnupg ca-certificates curl
+curl -s https://repos.azul.com/azul-repo.key | sudo gpg --dearmor -o /usr/share/keyrings/azul.gpg
+echo "deb [signed-by=/usr/share/keyrings/azul.gpg] https://repos.azul.com/zulu/deb stable main" | sudo tee /etc/apt/sources.list.d/zulu.list
+sudo apt update && sudo apt upgrade -y
+sudo apt install zulu17-jdk
+java -version
+
+
+	- foreground에서 spring 실행 -
+
+chmod +x gradlew
+./gradlew build -Pprofile=dev
+ls -la
+cd ./build/libs
+java -jar basic-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev
+Ctrl + C로 스프링 중단
+cd ../../
+git pull
+./gradlew build -Pprofile=dev
+cd ./build/libs
+java -jar basic-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev
+Ctrl + C로 스프링 중단
+
+
+	- background에서 spring 실행 -
+
+nohup java -jar basic-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev > output.log 2>&1 &
+ps -ef		-> 프로세스 확인용 (안써도 작동함)
+kill 프로세스_아이디	-> 백그라운드 작동하는 spring끄기(프로세스 끄기)
+ps -ef

@@ -1,0 +1,55 @@
+s3(스토리지), ec2(가상서버), rds(RDBS)를 한번에 핸들링 하기 위한 Lightsail을 사용하여 서버를 다룰 수 있음.
+
+Tabby -> AWS Lightsail 안 들어가고 .pem 키로만 들어갈 수 있는 편리함 제공
+
+'sudo': 관리자 권한으로 명령을 실행함.
+'apt': Advanced Package Tool의 약자로, 패키지 관리 시스템임.
+sudo apt update -> 패키지 정보를 최신화하는 역할임.
+sudo apt upgrade -> 현재 설치된 패키지들을 최신 버전으로 업그레이드함.
+
+/ -> root 디렉터리
+~ -> 디폴트 디렉터리
+
+cd - -> 이전 위치로 감. (뒤로가기 다른 파일에선 Ctrl+Z 같은 느낌)
+cd ~ 와 cd의 결과는 똑같음.
+
+ls -a 하면 숨긴 파일도 보여줌.
+ls -l 파일들의 내용을 자세하게 보여줌.
+ls -la 하면 a 옵션과 l 옵션을 조합한 결과를 보여줌.
+
+vim은 vi의 확장판으로 나온 것이라 vim을 사용하는 게 나음. (지금은 큰 차이는 없다고 함.)
+i는 현재 커서 삽입
+I는 맨 처음으로 커서가 이동해서 삽입
+a는 append 느낌으로 커서 다음부터 삽입
+A는 맨 끝으로 커서가 이동해서 삽입
+o는 현재 줄 아래에서 새로운 줄 삽입
+O는 현재 줄 위에서 새로운 줄 삽입
+
+:%s/est/EST/g	-> 전체 문서에서 est를 EST로 바꿈. (g 옵션은 모든 일치하는 부분을 다 바꾼다는 뜻)
+
+vim이 비정상으로 종료되면 복구 파일을 이용할 수 있는데 파일명이 파일제목.확장자.swp임.
+
+
+
+home/ubuntu에서
+
+touch example.txt
+touch 1.txt 2.txt 3.txt
+sudo mv 1.txt /home
+mv example.txt 1.txt
+mkdir app
+mkdir app1 app2
+mkdir -p app/good/good1
+rmdir app	-> 오류: 안에 내용이 있음.
+rmdir app1
+rm 1.txt
+rm 2.txt 3.txt 4.txt
+rm -r app
+rmdir app2
+vim test.txt	-> 아무거나 입력해서 실습.
+vim test1.txt
+cat test.txt
+cat test.txt test1.txt > merge.txt
+cat merge.txt
+whoami	-> 사용자 이름 나옴.
+exit
