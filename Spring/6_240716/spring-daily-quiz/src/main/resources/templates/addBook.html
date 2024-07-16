@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>새 책 추가</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+<h1>새 책 추가</h1>
+<form th:action="@{/books}" method="post">
+    <div>
+        <label for="title">제목</label>
+        <input type="text" id="title" name="title" />
+    </div>
+    <div>
+        <label for="author">저자</label>
+        <input type="text" id="author" name="author"></input>
+    </div>
+    <button type="submit">제출</button>
+</form>
+</body>
+</html>
