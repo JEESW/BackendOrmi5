@@ -1,0 +1,35 @@
+관리자 -> 모든 권한 (공지사항 CRUD)
+일반 -> 회원 관리창 접근 및 공지사항 CUD 빼고 다 가능, 자기가 쓴 글만 CUD
+정지 -> 공지사항 R만 가능
+비회원 -> 접속도 못하게 아무 권한 X
+
+-------------------------------------------------------------------------------------------------------
+
+V 메인(/fashionlog)	-> 회원 탈퇴 버튼, 게시글 카테고리 링크
+
+회원 관련 API
+V 로그인이랑 회원가입(/fashionlog/login)		-> 처음 떠야하는 페이지
+V 회원 가입 창(/fashionlog/sign-up)
+V 회원 관리 창(/fashionlog/management)		-> 관리자만 접근 가능 유저 정보가 뜨고 권한 부여
+
+
+게시글 API
+V 자유게시판 글 리스트(/fashionlog/free-board)	-> 자유 게시글 올리는 용도, 공지사항 포함
+V 룩북 리스트(/fashionlog/lookbook)	-> 디자이너가 룩북 올리는 용도
+V 데일리 룩 리스트(/fashionlog/daily-look)	-> 일반 사용자들이 올리는 용도
+V 인터뷰 리스트(/fashionlog/interview)	-> 인터뷰 용도
+V 거래 장터(/fashionlog/trade)	-> 거래 게시글 올리는 용도, 공지사항 포함
+
+V 게시글 생성(/fashionlog/{category}/new)
+V 게시글 내용(/fashionlog/{category}/{id})		-> 댓글 리스트, 작성 폼 포함
+V 게시글 수정(/fashionlog/{category}/{id}/edit)
+V 게시글 삭제(/fashionlog/{category})
+
+
+공지사항 API
+V 공지사항 (/fashionlog/notice)	-> 공지사항 페이지
+
+V 게시글 생성(/fashionlog/notice/new)
+V 게시글 내용(/fashionlog/notice/{id})		-> 댓글 리스트, 작성 폼 포함
+V 게시글 수정(/fashionlog/notice/{id}/edit)
+V 게시글 삭제(/fashionlog/notice)
