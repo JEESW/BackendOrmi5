@@ -11,6 +11,7 @@
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
+.idea
 
 # AWS User-specific
 .idea/**/aws.xml
@@ -81,7 +82,7 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 # Ignore application.yml file
-application-dev.yml
+src/main/resources/application-local.yml
 
 ### Intellij Patch ###
 # Comment Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-215987721
